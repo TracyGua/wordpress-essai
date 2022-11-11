@@ -17,9 +17,10 @@
 
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-		<link href="style.css" rel="stylesheet" /> 
+	 
 		<!--wordpress head-->
 		<?php wp_head(); ?>
+		<link href="style.css" rel="stylesheet" />
 	</head>
 	<body <?php body_class(); ?>>
 		<?php 
@@ -65,6 +66,16 @@
 					<div class="col-md-12">
 						<nav class="navbar navbar-expand-lg navigation col-6" role="navigation">
 							<div class="navbar-header container">
+<!--Logo-->
+<div class="logo">
+                    <a class="navbar-brand" href="index.html"> <img src="<?php echo get_template_directory_uri().'/assets/icones/logo.png'; ?>"/></a>
+                </div>
+
+                <!-- Hamburger button -->
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Affichage/masquage de la navigation">
+                    <span class="navbar-toggler-icon"><img src="medias/icones/burger_icon.png" alt=""></span>
+                </button>
+
 							<div id="mainNav" class="collapse navbar-collapse">
 							<ul class="navbar-nav menu-header">
                         <li class="nav-item menu console">
