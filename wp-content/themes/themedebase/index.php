@@ -74,7 +74,7 @@ if ( have_posts() ) :
 
 
 else : // Si aucune page n'a été trouvée
-	get_template_part( 'partials/404' ); // Affiche partials/404.php
+	get_template_part( 'partials/erreur404' ); // Affiche partials/404.php
 endif;
 
 get_footer(); // Affiche footer.php 

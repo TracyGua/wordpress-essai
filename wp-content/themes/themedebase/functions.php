@@ -64,3 +64,16 @@ function add_style_and_js()  {
 
 /* Appel de la fonction ajoutant les styles et scripts */
 add_action('wp_enqueue_scripts', 'add_style_and_js'); 
+
+function theme_scripts() {
+    wp_enqueue_style( 'bootstrapcss', get_template_directory_uri() . '/css/bootstrap.min.css' );
+    wp_enqueue_style( 'stylesheet', get_stylesheet_uri() );
+    wp_enqueue_script(
+            'bootstrapjs',
+            get_stylesheet_directory_uri() . '/js/bootstrap.js',
+            array(),
+            '3.3.5', // Bootstrap version number
+            true // Place before </body>
+    );
+}
+add_action( 'wp_enqueue_scripts', 'theme_scripts' );
