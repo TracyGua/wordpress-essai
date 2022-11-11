@@ -20,7 +20,7 @@ if ( have_posts() ) :
             <div class="container">
                 <!--Logo-->
                 <div class="logo">
-                    <a class="navbar-brand" href="index.html"> <img src="/wp-content/uploads/icones/logo.svg"/></a>
+                    <a class="navbar-brand" href="index.html"> <img src="<?php echo get_template_directory_uri().'/assets/icones/logo.png'; ?>"/></a>
                 </div>
 
                 <!-- Hamburger button -->
@@ -69,15 +69,15 @@ if ( have_posts() ) :
 
             <div class="swiper col-md-6">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide no1"><img src="medias/appareils/ipad/01_ipad.webp" alt="L'image est innaccessible"></div>
-                  <div class="swiper-slide no3"><img src="medias/appareils/iphone/01_iphone.webp" alt="L'image est innaccessible">    </div>
-                  <div class="swiper-slide no4"><img src="medias/appareils/iphone/02_iphone.webp" alt="L'image est innaccessible"></div>
-                  <div class="swiper-slide no1"><img src="medias/appareils/ps4/01_ps4.webp" alt="L'image est innaccessible"></div>
-                  <div class="swiper-slide no3"><img src="medias/appareils/ps4/02_ps4.webp" alt="L'image est innaccessible"></div>
-                  <div class="swiper-slide no3"><img src="medias/appareils/switch_lite/01_lite.webp" alt="L'image est innaccessible">    </div>
-                  <div class="swiper-slide no4"><img src="medias/appareils/switch_lite/02_lite.webp" alt="L'image est innaccessible"></div>
-                  <div class="swiper-slide no1"><img src="medias/appareils/ps5/01_ps5.webp" alt="L'image est innaccessible"></div>
-                  <div class="swiper-slide no3"><img src="medias/appareils/ps5/02_ps5.webp" alt="L'image est innaccessible"></div>
+                  <div class="swiper-slide no1"><img src="<?php echo get_template_directory_uri(). '/assets/appareils/ipad/01_ipad.webp'; ?>" alt=""></div>
+                  <div class="swiper-slide no3"><img src="<?php echo get_template_directory_uri(). '/assets/appareils/iphone/01_iphone.webp'; ?>" alt=""></div>
+                  <div class="swiper-slide no4"><img src="<?php echo get_template_directory_uri(). '/assets/appareils/iphone/02_iphone.webp'; ?>" alt=""></div>
+                  <div class="swiper-slide no1"><img src="<?php echo get_template_directory_uri(). '/assets/appareils/ps4/01_ps4.webp'; ?>" alt=""></div>
+                  <div class="swiper-slide no3"><img src="<?php echo get_template_directory_uri(). '/assets/appareils/ps4/02_ps4.webp'; ?>" alt=""></div>
+                  <div class="swiper-slide no3"><img src="<?php echo get_template_directory_uri(). '/assets/appareils/switch_lite/01_lite.webp'; ?>" alt="">    </div>
+                  <div class="swiper-slide no4"><img src="<?php echo get_template_directory_uri(). '/assets/appareils/switch_lite/02_lite.webp'; ?>" alt=""></div>
+                  <div class="swiper-slide no1"><img src="<?php echo get_template_directory_uri(). '/assets/appareils/ps5/01_ps5.webp'; ?>" alt=""></div>
+                  <div class="swiper-slide no3"><img src="<?php echo get_template_directory_uri(). '/assets/appareils/ps5/02_ps5.webp'; ?>" alt=""></div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -85,6 +85,16 @@ if ( have_posts() ) :
     </article>
    
 </main>
+<script>
+      var swiper = new Swiper(".swiper", {
+        autoplay: {
+        delay: 2000,
+        },
+        direction: 'horizontal',
+        loop: 'true',
+        effect: 'slide',
+    });
+  </script>
 </body>
 
 	<article>
