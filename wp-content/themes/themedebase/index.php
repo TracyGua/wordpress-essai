@@ -20,7 +20,7 @@ if ( have_posts() ) :
             <div class="container">
                 <!--Logo-->
                 <div class="logo">
-                    <a class="navbar-brand" href="index.html"> <img src="medias/icones/logo.svg"></a>
+                    <a class="navbar-brand" href="index.html"> <img src="/wp-content/uploads/icones/logo.svg"/></a>
                 </div>
 
                 <!-- Hamburger button -->
@@ -49,7 +49,7 @@ if ( have_posts() ) :
                     </ul> 
                     <div>
                         <a href="autres_pages/console.html">
-                        <img src="medias/icones/panier.png" alt=""></a>
+                        <img src="assets/icones/panier.png" alt=""></a>
 
                     </div>
                     <div>
