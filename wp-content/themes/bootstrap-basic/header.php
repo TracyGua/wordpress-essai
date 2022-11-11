@@ -38,7 +38,7 @@
 		<div class="container">
 			<?php do_action('before'); ?> 
 
-			<header role="banner" class="row">
+<header role="banner" class="row">
 			<nav class="navbar navbar-expand-lg navigation col-6">
 			<div class="container">
 
