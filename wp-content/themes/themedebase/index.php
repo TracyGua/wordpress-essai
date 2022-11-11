@@ -41,16 +41,7 @@ if ( have_posts() ) :
     </article>
    
 </main>
-<script>
-      var swiper = new Swiper(".swiper", {
-        autoplay: {
-        delay: 2000,
-        },
-        direction: 'horizontal',
-        loop: 'true',
-        effect: 'slide',
-    });
-  </script>
+
 </body>
 
 	<article>
@@ -68,7 +59,16 @@ if ( have_posts() ) :
 			get_template_part( 'partials/metas' );   // Affiche partials/metas.pgp (nom d'auteur, date de publication, etc.)
 		?>
 	</article>
-
+    <script>
+      var swiper = new Swiper(".swiper", {
+        autoplay: {
+        delay: 2000,
+        },
+        direction: 'horizontal',
+        loop: 'true',
+        effect: 'slide',
+    });
+  </script>
 <?php endwhile; wp_reset_postdata(); // Fermeture de la boucle
 
 
