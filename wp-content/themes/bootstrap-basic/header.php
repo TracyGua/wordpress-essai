@@ -35,37 +35,20 @@
 		<![endif]-->
 		
 		
-		<div class="container page-container">
+		<div class="container">
 			<?php do_action('before'); ?> 
+
 			<header role="banner" class="row">
-				<div class="row row-with-vspace site-branding">
-					<div class="col-md-6 site-title">
-						<h1 class="site-title-heading">
-							<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home"><?php bloginfo('name'); ?></a>
-						</h1>
-						<div class="site-description">
-							<small>
-								<?php bloginfo('description'); ?> 
-							</small>
-						</div>
-					</div>
-					<div class="col-md-6 page-header-top-right">
-						<div class="sr-only">
-							<a href="#content" title="<?php esc_attr_e('Skip to content', 'bootstrap-basic'); ?>"><?php _e('Skip to content', 'bootstrap-basic'); ?></a>
-						</div>
-						<?php if (is_active_sidebar('header-right')) { ?> 
-						<div class="pull-right">
-							<?php dynamic_sidebar('header-right'); ?> 
-						</div>
-						<div class="clearfix"></div>
-						<?php } // endif; ?> 
-					</div>
+			<nav class="navbar navbar-expand-lg navigation col-6">
+			<div class="container">
+
+				<div class='logo'>
+		<a class="navbar-brand"  href="<?php echo esc_url( home_url( '/' ) ); // Lien vers la page d'accueil ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); // Title it with the blog name ?>" rel="home">
+		<img src="<?php echo get_template_directory_uri().'/assets/icones/logo.png'; ?>"/>
+			</a>
+		</div>
+					
 				</div><!--.site-branding-->
-		
-			<!--Logo-->
-				<div class="logo">
-                    <a class="navbar-brand" href="index.html"> <img src="<?php echo get_template_directory_uri().'/assets/icones/logo.png'; ?>"/></a>
-                </div>
 
                 <!-- Hamburger button -->
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Affichage/masquage de la navigation">
@@ -100,6 +83,8 @@
 						</nav>
 					</div>
 				</div><!--.main-navigation-->
+				</div>
+				</nav>
 			</header>
 			
 			
