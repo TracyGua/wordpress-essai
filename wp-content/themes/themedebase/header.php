@@ -83,15 +83,28 @@
             </div>
         </nav>
     </header>
-	<h1>
-		<a href="<?php echo esc_url( home_url( '/' ) ); // Lien vers la page d'accueil ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); // Title it with the blog name ?>" rel="home"><?php bloginfo( 'name' ); // Affiche le nom du site ?></a>
-	</h1>
 
-	<nav>
+	
+	<header class="row">
+
+
+	<nav class="navbar navbar-expand-lg navigation col-6">
+	<div class="container">
+		 <!--Logo-->
+	<div class='logo' >
+		<a class="navbar-brand"  href="<?php echo esc_url( home_url( '/' ) ); // Lien vers la page d'accueil ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); // Title it with the blog name ?>" rel="home">
+		<img src="<?php echo get_template_directory_uri().'/assets/icones/logo.png'; ?>"/>
+	</a>
+</div>
+	<div id="mainNav" class="collapse navbar-collapse">
+		<ul class='navbar-nav menu-header'>
 		<?php 
 			// Affiche un menu si dans le tableau de bord un menu a été défini dans cet emplacement
-			wp_nav_menu( array( 'theme_location' => 'main-menu' ) );
+				wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); 
 		?>
+		</ul>
+		</div>
+		</div>
 	</nav>
 
 	<?php 
