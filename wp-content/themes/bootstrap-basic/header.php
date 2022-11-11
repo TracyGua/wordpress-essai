@@ -73,7 +73,7 @@
 
                 <!-- Hamburger button -->
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Affichage/masquage de la navigation">
-                    <span class="navbar-toggler-icon"><img src="<?php echo get_template_directory_uri(). 'assets/icones/burger_icon.png'; ?>" alt=""></span>
+                    <span class="navbar-toggler-icon"><img src="<?php echo get_template_directory_uri(). '/assets/icones/burger_icon.png'; ?>" alt=""></span>
                 </button>
 
 							<div id="mainNav" class="collapse navbar-collapse">
