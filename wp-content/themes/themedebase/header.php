@@ -16,8 +16,7 @@
 	// Tous les .css et .js sont chargés dans le fichier functions.php
 ?>
 <!--Bootstrap CSS-->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 <!--Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,7 +48,7 @@
 
                 <!-- Hamburger button -->
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Affichage/masquage de la navigation">
-                    <span class="navbar-toggler-icon"><img src="medias/icones/burger_icon.png" alt=""></span>
+                    <span class="navbar-toggler-icon"><img src="<?php echo get_template_directory_uri(). '/assets/icones/burger_icon.png'; ?>" alt=""></span>
                 </button>
 
                 <!--Navigation-->
