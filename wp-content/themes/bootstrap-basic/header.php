@@ -61,11 +61,7 @@
 						<?php } // endif; ?> 
 					</div>
 				</div><!--.site-branding-->
-				
-				<div class="row main-navigation">
-					<div class="col-md-12">
-						<nav class="navbar navbar-expand-lg navigation col-6" role="navigation">
-							<div class="navbar-header container">
+		
 			<!--Logo-->
 				<div class="logo">
                     <a class="navbar-brand" href="index.html"> <img src="<?php echo get_template_directory_uri().'/assets/icones/logo.png'; ?>"/></a>
