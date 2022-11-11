@@ -15,50 +15,6 @@ if ( have_posts() ) :
 
 <body>
 <main class="container"> <!--Pourquoi le nav est dans le main? Le main c'est le héros dans ce cas-->
-    <header class="row">
-        <nav class="navbar navbar-expand-lg navigation col-6">
-            <div class="container">
-                <!--Logo-->
-                <div class="logo">
-                    <a class="navbar-brand" href="index.html"> <img src="<?php echo get_template_directory_uri().'/assets/icones/logo.png'; ?>"/></a>
-                </div>
-
-                <!-- Hamburger button -->
-                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Affichage/masquage de la navigation">
-                    <span class="navbar-toggler-icon"><img src="medias/icones/burger_icon.png" alt=""></span>
-                </button>
-
-                <!--Navigation-->
-                <div id="mainNav" class="collapse navbar-collapse">
-                    <ul class="navbar-nav menu-header">
-                        <li class="nav-item menu console">
-                            <a href="autres_pages/console.html" class="nav-link">Console</a>
-                        </li>
-                        <li class="nav-item menu apple">
-                            <a href="autres_pages/apple.html" class="nav-link">Apple</a>
-                        </li>
-                        <li class="nav-item menu creation">
-                            <a href="autres_pages/creation.html" class="nav-link">Creation</a>
-                        </li>
-                        <li class="nav-item menu nouvelles">
-                            <a href="autres_pages/nouvelles.html" class="nav-link">Nouvelles</a>
-                        </li>
-                        <li class="nav-item menu contact">
-                            <a href="autres_pages/contact.html" class="nav-link">Contact</a>
-                        </li>
-                    </ul> 
-                    <div>
-                        <a href="autres_pages/console.html">
-                        <img src="assets/icones/panier.png" alt=""></a>
-
-                    </div>
-                    <div>
-                        <img src="medias/icones/langues.png" alt="">
-                    </div>
-                </div> 
-            </div>
-        </nav>
-    </header>
     <article class="row">
         <section class="heros__boite-description col-md-6">
             <h1 class="heros__titre-1">Des skins pour tous vos appareils!</h1>
