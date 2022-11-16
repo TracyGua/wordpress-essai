@@ -6,7 +6,7 @@
  */
 ?>
 
-			</div><!--.site-content-->
+			<!--.site-content-->
 			
 			
 			<footer>
@@ -55,7 +55,7 @@
         </div>
     </div>
 </footer>
-		</div><!--.container page-container-->
+		<!--.container page-container-->
 		
 		
 		<!--wordpress footer-->

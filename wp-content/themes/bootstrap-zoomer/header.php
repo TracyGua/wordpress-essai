@@ -35,8 +35,11 @@
 		<![endif]-->
 		
 		
-		<div class="container page-container">
+		
+			
+			<main class="container">
 			<?php do_action('before'); ?> 
+
 			<header class="row">
         <nav class="navbar navbar-expand-lg navigation col-6">
             <div class="container">
@@ -75,7 +78,7 @@
 
                     </div>
                     <div>
-                        <img src="<?php echo get_template_directory_uri(). '/medias/icones/langues.png'; ?>" alt="">
+                        <img src="<?php echo get_template_directory_uri(). '/assets/icones/langues.png'; ?>" alt="">
                     </div>
                 </div> 
             </div>
@@ -83,4 +86,3 @@
     </header>
 			
 			
-			<div id="content" class="row row-with-vspace site-content">

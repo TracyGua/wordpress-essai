@@ -12,7 +12,7 @@ get_header();
  */
 $main_column_size = bootstrapBasicGetMainColumnSize();
 ?>
-<main>
+
 <article class="row">
         <section class="heros__boite-description col-md-6">
             <h1 class="heros__titre-1">Des skins pour tous vos appareils!</h1>
