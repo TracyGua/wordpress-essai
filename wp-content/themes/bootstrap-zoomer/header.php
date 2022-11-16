@@ -17,7 +17,6 @@
 
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-		<script src="main.js"></script>
 		
 		<!--wordpress head-->
 		<?php wp_head(); ?>
