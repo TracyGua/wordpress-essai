@@ -44,21 +44,7 @@ if ( have_posts() ) :
 
 </body>
 
-	<article>
-		<?php the_post_thumbnail('large'); // Vignette large du post ?>
 
-		<h2>
-			<a href="<?php the_permalink(); // Lien du post ?>">
-				<?php the_title(); // Titre du post ?>
-			</a>
-		</h2>
-
-		<?php 
-			the_content(); // Contenu principal de la page
-
-			get_template_part( 'partials/metas' );   // Affiche partials/metas.pgp (nom d'auteur, date de publication, etc.)
-		?>
-	</article>
     <script>
       var swiper = new Swiper(".swiper", {
         autoplay: {
@@ -70,8 +56,6 @@ if ( have_posts() ) :
     });
   </script>
 <?php endwhile; wp_reset_postdata(); // Fermeture de la boucle
-
-
 
 else : // Si aucune page n'a été trouvée
 	get_template_part( 'partials/erreur404' ); // Affiche partials/404.php

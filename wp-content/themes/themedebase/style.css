@@ -5,12 +5,19 @@ Author URI: https://smnarnold.com
 Description: Thème de base pour apprendre à faire un site Wordpress.
 Version: 1.0
 -------------------------------------------------------------- */
-@charset "UTF-8";
+
+@mixin membreRole {
+
+}
+@mixin membreNom {
+
+}*/
 * {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0px;
   width: 100%;
   min-height: 100vh;
@@ -24,11 +31,16 @@ body {
 
 .navigation {
   margin: 25px auto;
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .logo img {
   width: 200px;
+}
+
+.menu-header {
+  padding-left: 25px;
 }
 
 h1 {
@@ -51,7 +63,7 @@ article {
   padding: 30px;
   margin-top: 60px;
   height: 400px;
-  border: 1px solid #EFA48B;
+  border: 1px solid #efa48b;
   border-radius: 20px;
   text-align: center;
   height: 100%;
@@ -82,6 +94,10 @@ main .row {
   width: 40px;
 }
 
+.logoPartenaire {
+  text-align: center;
+}
+
 .logoPartenaire img {
   width: 80px;
 }
@@ -94,7 +110,7 @@ main .row {
 .swiper-slide img {
   width: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 /* Écran telephone*/
@@ -113,48 +129,71 @@ main .row {
     width: 100%;
   }
 }
-.section__membres {
+.contact__main .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.contact__main .section__membres {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  /*
+  .membre__role{
+     @include membres.membreRole;
+  }
+
+  .membre__nom{
+     @include membres.membreNom;
+  }
+  */
+}
+.contact__main .section__membres .membres__cartes {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  width: 1000px;
 }
-
-.membre__titre {
+.contact__main .section__membres .membre__titre {
   text-align: center;
   text-decoration: underline;
   font-size: 25px;
   margin-bottom: 25px;
 }
-
-.membre__card {
-  width: 300px;
+.contact__main .section__membres .membre__card {
+  width: 100%;
+  max-width: 300px;
+  height: 400px;
   margin-bottom: 100px;
 }
-
-.membre__img {
+.contact__main .section__membres .membre__img {
   width: 100%;
   border-radius: 20px;
-  border: 2px solid #FCC8B2;
+  border: 2px solid #fcc8b2;
 }
-
-.membre__text {
+.contact__main .section__membres .membre__text {
   margin: 0 auto;
   width: 100%;
   margin-top: 10px;
   text-align: center;
-  background-color: #FCC8B2;
+  background-color: #fcc8b2;
   border-radius: 5px 5px 5px 5px;
 }
 
 .menu a:hover {
-  color: #EFA48B;
+  color: #efa48b;
 }
 
 .entete__sous-menu {
-  border: none;
+  border-width: 2px;
   text-decoration: none;
   margin-right: 20px;
   margin-left: 20px;
+  height: 70px;
+  margin-top: 25%;
 }
 
 .enteteIcon {
@@ -169,6 +208,7 @@ main .row {
   display: inline-block;
   width: 80%;
   margin-left: 20px;
+  flex-wrap: wrap;
 }
 
 .title__creation {
@@ -187,13 +227,15 @@ main .row {
 
 .icon p {
   text-align: center;
-  color: #FCC8B2;
+  color: #fcc8b2;
+  font-size: 20px;
 }
 
 .icon img {
   width: 100%;
+  height: 10%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   margin-left: auto;
 }
 
@@ -215,28 +257,29 @@ main .row {
 .imgItem {
   width: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   margin-left: auto;
   border-radius: 20px;
-  border: 2px solid #FCC8B2;
+  border: 2px solid #fcc8b2;
   overflow: hidden;
 }
 
 .itemP {
   text-align: center;
   color: #fff;
-  background-color: #FCC8B2;
-  border: 2px solid #FCC8B2;
+  background-color: #fcc8b2;
+  border: 2px solid #fcc8b2;
   border-radius: 10px;
   margin: 5px;
   padding: 3px;
+  font-size: 18px;
 }
 
 .item p:first-child {
   margin-top: 5px;
 }
 
-.section__contact {
+.contact__main .section__contact {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -246,72 +289,124 @@ main .row {
   margin-bottom: 175px;
   width: 100%;
 }
-.section__contact .contact__titre {
+.contact__main .section__contact .contact__titre {
+  width: 100%;
   text-align: center;
   text-decoration: underline;
   font-size: 25px;
   margin-bottom: 25px;
-  width: 100%;
   font-family: "Roboto", Medium;
 }
-.section__contact .contact__form {
+.contact__main .section__contact .contact__form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 1000px;
 }
-.section__contact .contact__form label {
+.contact__main .section__contact .contact__form label {
   text-decoration: underline;
   margin-right: 45px;
 }
-.section__contact .contact__form input {
+.contact__main .section__contact .contact__form input {
   border-radius: 25px;
   padding: 5px 200px;
-  border: solid 2px #FCC8B2;
+  border: solid 2px #fcc8b2;
 }
-.section__contact .contact__form .form__nom, .section__contact .contact__form .form__prenom, .section__contact .contact__form .form__courriel, .section__contact .contact__form .form__sujet, .section__contact .contact__form .form__message {
+.contact__main .section__contact .contact__form .form__nom,
+.contact__main .section__contact .contact__form .form__prenom,
+.contact__main .section__contact .contact__form .form__courriel,
+.contact__main .section__contact .contact__form .form__sujet,
+.contact__main .section__contact .contact__form .form__message {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.section__contact .contact__form .form__nom ::-moz-placeholder, .section__contact .contact__form .form__prenom ::-moz-placeholder, .section__contact .contact__form .form__courriel ::-moz-placeholder, .section__contact .contact__form .form__sujet ::-moz-placeholder, .section__contact .contact__form .form__message ::-moz-placeholder {
+.contact__main .section__contact .contact__form .form__nom ::-moz-placeholder,
+.contact__main
+  .section__contact
+  .contact__form
+  .form__prenom
+  ::-moz-placeholder,
+.contact__main
+  .section__contact
+  .contact__form
+  .form__courriel
+  ::-moz-placeholder,
+.contact__main .section__contact .contact__form .form__sujet ::-moz-placeholder,
+.contact__main
+  .section__contact
+  .contact__form
+  .form__message
+  ::-moz-placeholder {
   text-align: center;
 }
-.section__contact .contact__form .form__nom :-ms-input-placeholder, .section__contact .contact__form .form__prenom :-ms-input-placeholder, .section__contact .contact__form .form__courriel :-ms-input-placeholder, .section__contact .contact__form .form__sujet :-ms-input-placeholder, .section__contact .contact__form .form__message :-ms-input-placeholder {
+.contact__main
+  .section__contact
+  .contact__form
+  .form__nom
+  :-ms-input-placeholder,
+.contact__main
+  .section__contact
+  .contact__form
+  .form__prenom
+  :-ms-input-placeholder,
+.contact__main
+  .section__contact
+  .contact__form
+  .form__courriel
+  :-ms-input-placeholder,
+.contact__main
+  .section__contact
+  .contact__form
+  .form__sujet
+  :-ms-input-placeholder,
+.contact__main
+  .section__contact
+  .contact__form
+  .form__message
+  :-ms-input-placeholder {
   text-align: center;
 }
-.section__contact .contact__form .form__nom ::placeholder, .section__contact .contact__form .form__prenom ::placeholder, .section__contact .contact__form .form__courriel ::placeholder, .section__contact .contact__form .form__sujet ::placeholder, .section__contact .contact__form .form__message ::placeholder {
+.contact__main .section__contact .contact__form .form__nom ::placeholder,
+.contact__main .section__contact .contact__form .form__prenom ::placeholder,
+.contact__main .section__contact .contact__form .form__courriel ::placeholder,
+.contact__main .section__contact .contact__form .form__sujet ::placeholder,
+.contact__main .section__contact .contact__form .form__message ::placeholder {
   text-align: center;
 }
-.section__contact .contact__form .form__nom input, .section__contact .contact__form .form__prenom input, .section__contact .contact__form .form__courriel input, .section__contact .contact__form .form__sujet input {
+.contact__main .section__contact .contact__form .form__nom input,
+.contact__main .section__contact .contact__form .form__prenom input,
+.contact__main .section__contact .contact__form .form__courriel input,
+.contact__main .section__contact .contact__form .form__sujet input {
   width: 100%;
 }
-.section__contact .contact__form .form__prenom label, .section__contact .contact__form .form__courriel label {
+.contact__main .section__contact .contact__form .form__prenom label,
+.contact__main .section__contact .contact__form .form__courriel label {
   margin-right: 25px;
 }
-.section__contact .contact__form .form__message {
+.contact__main .section__contact .contact__form .form__message {
   display: flex;
   align-items: flex-start;
 }
-.section__contact .contact__form .form__message label {
+.contact__main .section__contact .contact__form .form__message label {
   margin-right: 20px;
 }
-.section__contact .contact__form .form__message textarea {
+.contact__main .section__contact .contact__form .form__message textarea {
   border-radius: 25px;
   padding: 5px 100px;
   width: 100%;
-  border: solid 2px #FCC8B2;
+  border: solid 2px #fcc8b2;
 }
-.section__contact .contact__form .btn__envoyer {
+.contact__main .section__contact .contact__form .btn__envoyer {
   text-decoration: none;
   padding: 5px 25px;
   align-self: center;
-  background-color: #FCC8B2;
+  background-color: #fcc8b2;
 }
-.section__contact .contact__form .btn__envoyer:hover {
-  background-color: #EFA48B;
+.contact__main .section__contact .contact__form .btn__envoyer:hover {
+  background-color: #efa48b;
   text-decoration: underline;
 }
 
@@ -320,20 +415,37 @@ main .row {
   width: 100%;
 }
 
+footer {
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  height: 100%;
+  width: 100%;
+  padding: 25px;
+  z-index: 1;
+  margin-top: auto;
+}
+
 .groupePied {
   width: 100%;
-  display: flex;
+  max-width: 1000px;
+  /*display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center;*/
+}
+
+.logoPartenaire {
+  padding: 25px;
 }
 
 .reseauxsociaux {
   position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
   height: 100%;
+  padding-bottom: 25px;
 }
 
 .facebook {
@@ -346,7 +458,8 @@ main .row {
   width: 20px;
 }
 
-.telephone, a {
+.telephone,
+a {
   color: #fff;
 }
 
@@ -355,13 +468,11 @@ main .row {
   margin-bottom: 3px;
 }
 
-footer {
-  display: flex;
-  align-items: center;
-  background-color: #000;
-  height: 200px;
-  width: 100%;
-  padding: 20px;
-  z-index: 1;
-  margin-top: auto;
-}/*# sourceMappingURL=main.css.map */
+.compagnie {
+  margin: 25px;
+  color: #fff;
+}
+
+.compagnie:hover {
+  color: #fff;
+} /*# sourceMappingURL=main.css.map */

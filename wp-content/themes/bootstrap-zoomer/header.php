@@ -1,50 +1,49 @@
 <?php
-/**
- * The theme header
- * 
- * @package bootstrap-basic
- */
+	/*-----------------------------------------------------------------------------------*/
+	/* Affiche l'entête (Header) sur toutes vos pages
+	/*-----------------------------------------------------------------------------------*/
 ?>
 <!DOCTYPE html>
-<!--[if lt IE 7]>  <html class="no-js lt-ie9 lt-ie8 lt-ie7" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 7]>     <html class="no-js lt-ie9 lt-ie8" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 8]>     <html class="no-js lt-ie9" <?php language_attributes(); ?>> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
-	<head>
-		<meta charset="<?php bloginfo('charset'); ?>">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width">
+<html <?php language_attributes(); ?>>
+<head>
+<meta charset="<?php bloginfo( 'charset' ); ?>" />
+<meta name="viewport" content="width=device-width" />
+<title>
+	<?php bloginfo('Zoomhit Skins'); // Affiche le nom du blog ?> | 
+	<?php is_front_page() ? bloginfo('description') : wp_title(''); // si nous sommes sur la page d'accueil, affichez la description à partir des paramètres du site - sinon, affichez le titre du post ou de la page. ?>
+</title>
+<?php 
+	// Tous les .css et .js sont chargés dans le fichier functions.php
+?>
+<!--Bootstrap CSS-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Ruda:wght@600&display=swap" rel="stylesheet">
 
-		<link rel="profile" href="http://gmpg.org/xfn/11">
-		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-		
-		<!--wordpress head-->
-		<?php wp_head(); ?>
-	</head>
-	<body <?php body_class(); ?>>
-		<?php 
-		if ( function_exists( 'wp_body_open' ) ) {
-			wp_body_open();
-		} else {
-			do_action( 'wp_body_open' );
-		}
-		?> 
-		<!--[if lt IE 8]>
-			<p class="ancient-browser-alert">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/" target="_blank">upgrade your browser</a>.</p>
-		<![endif]-->
-		
-		
-		
-			
-			<main class="container">
-			<?php do_action('before'); ?> 
+<?php wp_head(); 
+/* Cette fonction permet à WordPress et aux extensions d'instancier des fichier CSS et js dans le <head>
+	 Supprimer cette fonction briserait vos extensions et diverses fonctionnalités WordPress. 
+	 Vous pouvez la déplacer si désiré, mais garder là. */
+?>
+</head>
 
-			<header class="row">
+<body 
+	<?php body_class(); 
+	/* Applique une classe contextuel sur le body
+		 ex: sur la page d'accueil vous aurez la classe "home"
+		 sur un article, "single postid-{ID}"
+		 etc. */
+	?>
+>
+
+<header class="row">
         <nav class="navbar navbar-expand-lg navigation col-6">
             <div class="container">
                 <!--Logo-->
                 <div class="logo">
-                    <a class="navbar-brand" href="index.html"> <img src="<?php echo get_template_directory_uri(). '/assets/icones/logo.png'; ?>"></a>
+                    <a class="navbar-brand" href="index.html"> <img src="<?php echo get_template_directory_uri().'/assets/icones/logo.png'; ?>"/></a>
                 </div>
 
                 <!-- Hamburger button -->
@@ -73,15 +72,15 @@
                     </ul> 
                     <div>
                         <a href="autres_pages/console.html">
-                        <img src="<?php echo get_template_directory_uri(). '/assets/icones/panier.png'; ?>" alt=""></a>
+                        <img src="assets/icones/panier.png" alt=""></a>
 
                     </div>
                     <div>
-                        <img src="<?php echo get_template_directory_uri(). '/assets/icones/langues.png'; ?>" alt="">
+                        <img src="medias/icones/langues.png" alt="">
                     </div>
                 </div> 
             </div>
         </nav>
     </header>
-			
-			
+    <main><!-- Débute le contenu principal de notre site -->
+
