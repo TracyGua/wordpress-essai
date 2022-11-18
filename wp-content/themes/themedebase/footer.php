@@ -60,7 +60,7 @@
 	 Si vous enlevez cette fonction, vous désactiverez du même coup toutes vos extensions (plugins) 🤷. 
 	 Vous pouvez la déplacer si désiré, mais garder là. */
 ?>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 		crossorigin="anonymous"></script>
     <!--GSAP 3-->
@@ -70,7 +70,6 @@
 	rel="stylesheet"
 	href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
   />
-  
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </body>
 
