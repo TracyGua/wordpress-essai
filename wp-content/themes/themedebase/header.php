@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Ruda:wght@600&display=swap" rel="stylesheet">
-
+    
 <?php wp_head(); 
 /* Cette fonction permet à WordPress et aux extensions d'instancier des fichier CSS et js dans le <head>
 	 Supprimer cette fonction briserait vos extensions et diverses fonctionnalités WordPress. 
@@ -44,7 +44,7 @@
                 <!--Logo-->
 
                 <div class="logo">
-                    <a class="navbar-brand" href="index.html"> <img src="<?php echo get_template_directory_uri().'/assets/icones/logo.png'; ?>"/></a>
+                    <a class="navbar-brand" href="index.php"> <img src="<?php echo get_template_directory_uri().'/assets/icones/logo.png'; ?>"/></a>
                 </div>
 
                 <!-- Hamburger button -->
@@ -55,13 +55,28 @@
                 <!--Navigation-->
                 <div id="mainNav" class="collapse navbar-collapse">
                 <?php wp_nav_menu( array( 'menu_class' => 'navbar-nav menu-header', 'container' => 'ul', )); ?>
+
+                <ul class="navbar-nav menu-header">
+                        <li class="nav-item menu console">
+                            <a href="console.php" class="nav-link">Console</a>
+                        </li>
+                        <li class="nav-item menu apple">
+                            <a href="partials/apple.php" class="nav-link">Apple</a>
+                        </li>
+                        <li class="nav-item menu nouvelles">
+                            <a href="partials/nouvelles.php" class="nav-link">Nouvelles</a>
+                        </li>
+                        <li class="nav-item menu contact">
+                            <a href="page-contact.php" class="nav-link">Contact</a>
+                        </li>
+                    </ul> 
                     <div>
                         <a href="autres_pages/console.html">
-                        <img src="assets/icones/panier.png" alt=""></a>
+                        <img src="<?php echo get_template_directory_uri(). '/assets/icones/panier.png'; ?>" alt=""></a>
 
                     </div>
                     <div>
-                        <img src="medias/icones/langues.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(). '/assets/icones/langues.png'; ?>" alt="">
                     </div>
                 </div> 
             </div>

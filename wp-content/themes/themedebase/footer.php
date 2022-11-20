@@ -71,6 +71,16 @@
 	href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
   />
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".swiper", {
+  autoplay: {
+    delay: 2000,
+  },
+  direction: "horizontal",
+  loop: "true",
+  effect: "slide",
+});
+</script>
 </body>
 
 
