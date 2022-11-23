@@ -42,9 +42,8 @@
         <nav class="navbar navbar-expand-lg navigation col-6">
             <div class="container">
                 <!--Logo-->
-
                 <div class="logo">
-                    <a class="navbar-brand" href="index.php"> <img src="<?php echo get_template_directory_uri().'/assets/icones/logo.png'; ?>"/></a>
+                <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); // Lien vers la page d'accueil ?>" title="<?php echo esc_attr( get_bloginfo( 'ZoomHit Skins', 'display' ) ); // Title it with the blog name ?>" rel="home"><img src="<?php echo get_template_directory_uri().'/assets/icones/logo.png'; ?>"></a>
                 </div>
 
                 <!-- Hamburger button -->
@@ -54,9 +53,9 @@
 
                 <!--Navigation-->
                 <div id="mainNav" class="collapse navbar-collapse">
-                <?php wp_nav_menu( array( 'menu_class' => 'navbar-nav menu-header', 'container' => 'ul', )); ?>
+                <?php wp_nav_menu( array( 'menu_class' => 'navbar-nav menu-header', 'container' => 'ul', 'list_item_class' => 'nav-item menu',  'link_class' => 'nav-link', )); ?>
 
-                <ul class="navbar-nav menu-header">
+              <!--  <ul class="navbar-nav menu-header">
                         <li class="nav-item menu console">
                             <a href="console.php" class="nav-link">Console</a>
                         </li>
@@ -77,7 +76,7 @@
                     </div>
                     <div>
                         <img src="<?php echo get_template_directory_uri(). '/assets/icones/langues.png'; ?>" alt="">
-                    </div>
+                    </div>-->
                 </div> 
             </div>
         </nav>

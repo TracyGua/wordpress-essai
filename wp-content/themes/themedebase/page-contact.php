@@ -1,3 +1,5 @@
+<?php /* Template Name: Contact */ ?>
+
 <?php
 /**
  * Modèle générique au cas où Wordpress ne trouve pas un modèle
@@ -65,7 +67,7 @@ if ( have_posts() ) :
                     
                 <div class="col-sm-12 col-md-6 col-lg-3">
                     <div class="card membre__card"> <!--Mettre la classe card pour le div qui contient tous les éléments de la cartes-->
-                        <img class="card-img-top membre__img" src="../medias/images_membres/tracy.png">
+                        <img class="card-img-top membre__img" src="<?php echo get_template_directory_uri(). '/assets/images_membres/tracy.png'; ?>">
                         <div class="card-body membre__text"> <!--Ajouter la classe card-body pour le div qui contient le text-->
                             <p class="card-text membre__role">Rôle: Project Owner(PO) et Scrum Master</p>
                             <p class="card-text membre__nom">Nom: Tracy Gua</p>
@@ -74,7 +76,7 @@ if ( have_posts() ) :
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-3">
                     <div class="card membre__card"> 
-                        <img class="card-img-top membre__img" src="../medias/images_membres/mariaLaura.png">
+                        <img class="card-img-top membre__img" src="<?php echo get_template_directory_uri(). '/assets/images_membres/mariaLaura.png'; ?>">
                         <div class="card-body membre__text"> 
                             <p class="card-text membre__role">Rôle:Developper Back-end & DevOp</p>
                             <p class="card-text membre__nom">Nom: Maria Laura Coronel</p>
@@ -84,7 +86,7 @@ if ( have_posts() ) :
 
                 <div class="col-sm-12 col-md-6 col-lg-3">
                     <div class="card membre__card"> 
-                            <img class="card-img-top membre__img" src="../medias/images_membres/florence.png">
+                            <img class="card-img-top membre__img" src="<?php echo get_template_directory_uri(). '/assets/images_membres/florence.png'; ?>">
                         <div class="card-body membre__text"> 
                             <p class="card-text membre__role">Rôle: Designer et Assurance Qualité(QA)</p>                                    
                             <p class="card-text membre__nom">Nom: Florence Lapierre</p>
@@ -94,7 +96,7 @@ if ( have_posts() ) :
                                 
                 <div class="col-sm-12 col-md-6 col-lg-3">
                     <div class="card membre__card"> 
-                        <img class="card-img-top membre__img" src="../medias/images_membres/natacha.png">
+                        <img class="card-img-top membre__img" src="<?php echo get_template_directory_uri(). '/assets/images_membres/natacha.png'; ?>">
                         <div class="card-body membre__text"> 
                             <p class="card-text membre__role">Rôle: Agent de promotion</p>
                             <p class="card-text membre__nom">Nom: Natacha Abdallah</p>                            
