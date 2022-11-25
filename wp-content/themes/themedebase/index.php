@@ -45,20 +45,10 @@ if ( have_posts() ) :
 </body>
 
 
-    <script>
-      var swiper = new Swiper(".swiper", {
-        autoplay: {
-        delay: 2000,
-        },
-        direction: 'horizontal',
-        loop: 'true',
-        effect: 'slide',
-    });
-  </script>
 <?php endwhile; wp_reset_postdata(); // Fermeture de la boucle
 
 else : // Si aucune page n'a été trouvée
-	get_template_part( 'partials/erreur404' ); // Affiche partials/404.php
+	get_template_part( 'partials/404' ); // Affiche partials/404.php
 endif;
 
 get_footer(); // Affiche footer.php 

@@ -1,4 +1,11 @@
-<section>
-  <h2></h2>
-	<img class='404_img' src="<?php echo get_template_directory_uri(). '../assets/icones/404.png'; ?>" alt="404">
+<?php
+
+get_header(); // Affiche header.php
+?>
+
+<section class="section__erreur404">
+    <p class="erreur404__titre text-center">Oups</p>
+    <p class="erreur404__titre2 text-center">Cette page n'existe pas</p>
 </section>
+<?php get_footer(); // Affiche footer.php 
+?>

@@ -1,22 +1,12 @@
 <?php /* Template Name: Contact */ ?>
 
+
 <?php
-/**
- * Modèle générique au cas où Wordpress ne trouve pas un modèle
- * À utiliser comme fallback seulement.
- */
 
 get_header(); // Affiche header.php
-
-// Est-ce que nous avons des posts qui correspondent à notre requête ?
-// Dans le cas de la page d'accueil, les billets les plus récents serons affichés
-if ( have_posts() ) : 
-	// Si oui, bouclons au travers pour tous les afficher
-	while ( have_posts() ) : the_post(); 
 ?>
 
-<body>
-<main  class="contact__main" id="idMain">
+<div  class="contact__main" id="idMain">
         <section class="container section__contact">
             <div class="row justify-content-center align-items-center">
                 <div class="section__contact__titre col-12">
@@ -58,8 +48,7 @@ if ( have_posts() ) :
 
                 
             
-            
-        <section class="container section__membres">
+        <section class="container mx-auto section__membres">
             <div class="row membres__cartes">
                 <!--Inclure le titre de la section des membres dans la balise section des membres, mais pas dans celle qui contient les cartes-->
                 <h1 class="membre__titre text-center">Membres</h1>
@@ -69,8 +58,8 @@ if ( have_posts() ) :
                     <div class="card membre__card"> <!--Mettre la classe card pour le div qui contient tous les éléments de la cartes-->
                         <img class="card-img-top membre__img" src="<?php echo get_template_directory_uri(). '/assets/images_membres/tracy.png'; ?>">
                         <div class="card-body membre__text"> <!--Ajouter la classe card-body pour le div qui contient le text-->
-                            <p class="card-text membre__role">Rôle: Project Owner(PO) et Scrum Master</p>
-                            <p class="card-text membre__nom">Nom: Tracy Gua</p>
+                            <p class="card-text membre__role Tracy">Rôle: Project Owner(PO) et Scrum Master</p>
+                            <p class="card-text membre__nom Tracy">Nom: Tracy Gua</p>
                         </div>
                     </div>
                 </div>
@@ -78,8 +67,8 @@ if ( have_posts() ) :
                     <div class="card membre__card"> 
                         <img class="card-img-top membre__img" src="<?php echo get_template_directory_uri(). '/assets/images_membres/mariaLaura.png'; ?>">
                         <div class="card-body membre__text"> 
-                            <p class="card-text membre__role">Rôle:Developper Back-end & DevOp</p>
-                            <p class="card-text membre__nom">Nom: Maria Laura Coronel</p>
+                            <p class="card-text membre__role Maria">Rôle:Developper Back-end & DevOp</p>
+                            <p class="card-text membre__nom Maria">Nom: Maria Laura Coronel</p>
                         </div>
                     </div>
                 </div>
@@ -88,8 +77,8 @@ if ( have_posts() ) :
                     <div class="card membre__card"> 
                             <img class="card-img-top membre__img" src="<?php echo get_template_directory_uri(). '/assets/images_membres/florence.png'; ?>">
                         <div class="card-body membre__text"> 
-                            <p class="card-text membre__role">Rôle: Designer et Assurance Qualité(QA)</p>                                    
-                            <p class="card-text membre__nom">Nom: Florence Lapierre</p>
+                            <p class="card-text membre__role Flo">Rôle: Designer et Assurance Qualité(QA)</p>                                    
+                            <p class="card-text membre__nom Flo">Nom: Florence Lapierre</p>
                         </div>
                     </div>
                 </div>
@@ -98,23 +87,18 @@ if ( have_posts() ) :
                     <div class="card membre__card"> 
                         <img class="card-img-top membre__img" src="<?php echo get_template_directory_uri(). '/assets/images_membres/natacha.png'; ?>">
                         <div class="card-body membre__text"> 
-                            <p class="card-text membre__role">Rôle: Agent de promotion</p>
-                            <p class="card-text membre__nom">Nom: Natacha Abdallah</p>                            
+                            <p class="card-text membre__role Nat">Rôle: Agent de promotion</p>
+                            <p class="card-text membre__nom Nat">Nom: Natacha Abdallah</p>                            
                         </div>
                     </div>   
                 </div>
                    
             </div>
-        </section>
-     
-    </main>
+        </section>    
 
-</body>
-<?php endwhile; wp_reset_postdata(); // Fermeture de la boucle
 
-else : // Si aucune page n'a été trouvée
-	get_template_part( 'partials/erreur404' ); // Affiche partials/404.php
-endif;
-
-get_footer(); // Affiche footer.php 
+</div>
+<?php get_footer(); // Affiche footer.php 
 ?>
+<!---->
+

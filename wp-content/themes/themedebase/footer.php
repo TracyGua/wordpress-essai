@@ -63,8 +63,8 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
 		crossorigin="anonymous"></script>
-    <!--GSAP 3-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+     <!--GSAP 3-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
       <!--Swiper-->
     <link
 	rel="stylesheet"
@@ -80,6 +80,12 @@
   loop: "true",
   effect: "slide",
 });
+gsap.timeline() 
+    .from('.heros__boite-description',{opacity:0, duration:1, scale:0, ease:'bounce'})  
+
+    gsap.timeline()
+.from('.erreur404__titre',{opacity:0, duration:1, scale:0, ease:'back'})  
+.from('.erreur404__titre2',{opacity:0, duration:1, scale:0, ease:'bounce'})  
 </script>
 </body>
 
