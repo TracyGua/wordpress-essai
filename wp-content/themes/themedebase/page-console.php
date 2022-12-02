@@ -5,35 +5,6 @@
 get_header(); // Affiche header.php
 ?>
 
-<div class='enteteIcon dropright show'>
-
-<a class="deroulant entete__sous-menu btn btn-secondary dropdown-toggle" href="#" role="button"
-    id="dropdownMenuLink" data-bs-toggle="dropdown" data-toggle="dropdown" aria-haspopup="true"
-    aria-expanded="false">
-    Console disponible
-</a>
-<div class=' imageConsole dropdown-menu sm ' x-placement="right-start" aria-labelledby="dropdownMenuLink">
-    <div class="icon Ps4 dropright-item" href="#"><img src="<?php echo get_template_directory_uri(). '\assets\icones\playstation.svg'; ?>">
-        <p>Ps4</p>
-    </div>
-    <div class="icon Ps5 dropright-item" href="#"><img src="<?php echo get_template_directory_uri(). '\assets\icones\playstation.svg'; ?>">
-        <p>Ps5</p>
-    </div>
-    <div class="icon Switch dropright-item" href="#"><img src="<?php echo get_template_directory_uri(). '\assets\icones\nintendo switch.png'; ?>">
-        <p>Switch</p>
-    </div>
-    <div class="icon Switche lite dropright-item" href="#"><img src="<?php echo get_template_directory_uri(). '\assets\icones\switch lite.png'; ?>">
-        <p>Switche lite</p>
-    </div>
-    <div class="icon Switch oled dropright-item" href="#"><img src="<?php echo get_template_directory_uri(). '\assets\icones\nintendo switch.png'; ?>">
-        <p>Switch oled</p>
-    </div>
-    <div class="icon Xbox one dropright-item" href="#"><img src="<?php echo get_template_directory_uri(). '\assets\icones\xbox.png'; ?>">
-        <p>Xbox one</p>
-    </div>
-</div>
-</div>
-
     <div class="produits">
         <div class="item ps4_1">
         <a href="#" class="lienItem">  <img class='imgItem' src="<?php echo get_template_directory_uri(). '\assets\appareils\ps4\01_ps4.webp'; ?>"></a>
