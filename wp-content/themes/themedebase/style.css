@@ -16,7 +16,8 @@ body {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0px;
   width: 100%;
   min-height: 100vh;
@@ -78,7 +79,7 @@ article {
   padding: 30px;
   margin-top: 60px;
   height: 400px;
-  border: 1px solid #EFA48B;
+  border: 1px solid #efa48b;
   border-radius: 20px;
   text-align: center;
   height: 100%;
@@ -95,7 +96,7 @@ main .row {
 }
 
 .menu a:hover {
-  color: #EFA48B;
+  color: #efa48b;
 }
 
 .navbar-toggler-icon img {
@@ -103,15 +104,20 @@ main .row {
   transition: transform 0.5s;
 }
 
-.panier, .lang {
+.panier,
+.lang {
   margin: 10px;
 }
 
-.panier img, .lang img {
+.panier img,
+.lang img {
   transition: transform 0.5s;
 }
 
-.logo img:hover, .navbar-toggler-icon img:hover, .panier img:hover, .lang img:hover {
+.logo img:hover,
+.navbar-toggler-icon img:hover,
+.panier img:hover,
+.lang img:hover {
   transform: scale(1.1);
   transition: transform 0.5s;
 }
@@ -124,7 +130,7 @@ main .row {
 .swiper-slide img {
   width: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 /* Menu hamburger*/
@@ -190,7 +196,7 @@ main .row {
   max-width: 400px;
   align-self: center;
   border-radius: 20px;
-  border: 2px solid #FCC8B2;
+  border: 2px solid #fcc8b2;
 }
 .contact__main .section__membres .membre__text {
   margin: 0 auto;
@@ -200,7 +206,7 @@ main .row {
   margin-top: 10px;
   text-align: center;
   border-radius: 5px 5px 5px 5px;
-  background-color: #FCC8B2;
+  background-color: #fcc8b2;
 }
 .contact__main .section__membres .membre__role {
   padding: 10px 0px;
@@ -251,10 +257,10 @@ main .row {
     position: absolute !important;
     transform: translate3d(60%, 175%, 0px) !important;
     flex-wrap: wrap;
-    color: #FCC8B2;
+    color: #fcc8b2;
     margin-left: 30px !important;
     -o-object-fit: contain !important;
-       object-fit: contain !important;
+    object-fit: contain !important;
   }
 }
 @media screen and (max-width: 900px) {
@@ -271,10 +277,10 @@ main .row {
     position: absolute !important;
     transform: translate3d(60%, 160%, 0px) !important;
     flex-wrap: wrap;
-    color: #FCC8B2;
+    color: #fcc8b2;
     margin-left: 30px !important;
     -o-object-fit: contain !important;
-       object-fit: contain !important;
+    object-fit: contain !important;
   }
 }
 @media screen and (min-width: 600px) {
@@ -292,11 +298,11 @@ main .row {
 @media screen and (max-width: 600px) {
   .icon p {
     text-align: center;
-    color: #FCC8B2;
+    color: #fcc8b2;
     font-size: 18px;
     width: 100%;
     -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
   .imageConsole {
     display: block;
@@ -308,10 +314,10 @@ main .row {
     position: absolute !important;
     transform: translate3d(60%, 160%, 0px) !important;
     flex-wrap: wrap;
-    color: #FCC8B2;
+    color: #fcc8b2;
     margin-left: 30px !important;
     -o-object-fit: contain !important;
-       object-fit: contain !important;
+    object-fit: contain !important;
   }
 }
 @media screen and (max-width: 375px) {
@@ -331,16 +337,16 @@ main .row {
     position: absolute !important;
     transform: translate3d(60%, 160%, 0px) !important;
     flex-wrap: wrap;
-    color: #FCC8B2;
+    color: #fcc8b2;
     margin-left: 30px !important;
     -o-object-fit: contain !important;
-       object-fit: contain !important;
+    object-fit: contain !important;
   }
 }
 .enteteIcon a {
   list-style-type: none;
-  background-color: #EFA48B;
-  box-shadow: #EFA48B;
+  background-color: #efa48b;
+  box-shadow: #efa48b;
   display: block;
   text-align: center;
   padding: 0px;
@@ -354,8 +360,8 @@ main .row {
 }
 
 .deroulant {
-  background-color: #FCC8B2 !important;
-  border-color: #FCC8B2 !important;
+  background-color: #fcc8b2 !important;
+  border-color: #fcc8b2 !important;
   width: 90% !important;
 }
 
@@ -393,38 +399,38 @@ ul {
 @media screen and (min-width: 900px) {
   .icon p {
     text-align: center;
-    color: #FCC8B2;
+    color: #fcc8b2;
     font-size: 20px;
     width: 100%;
     -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
 }
 @media screen and (min-width: 600px) {
   .icon p {
     text-align: center;
-    color: #FCC8B2;
+    color: #fcc8b2;
     font-size: 18px;
     width: 100%;
     -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
 }
 @media screen and (max-width: 375px) {
   .icon p {
     text-align: center;
-    color: #FCC8B2;
+    color: #fcc8b2;
     font-size: 12px;
     width: 100%;
     -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
 }
 .icon img {
   width: 100%;
   height: 10%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   margin-left: auto;
 }
 
@@ -447,12 +453,12 @@ ul {
 .imgItem {
   width: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   margin-left: auto;
   border-radius: 20px;
-  border: 2px solid #FCC8B2;
+  border: 2px solid #fcc8b2;
   overflow: hidden;
-  border: 2px solid #FCC8B2;
+  border: 2px solid #fcc8b2;
   transition: transform 0.5s;
 }
 
@@ -467,12 +473,13 @@ ul {
   padding: 3px;
   font-size: 18px;
   color: #fff;
-  background-color: #FCC8B2;
-  border: 2px solid #FCC8B2;
+  background-color: #fcc8b2;
+  border: 2px solid #fcc8b2;
   transition: transform 0.5s;
 }
 
-.imgItem:hover, .itemP:hover {
+.imgItem:hover,
+.itemP:hover {
   color: #000;
   transform: scale(0.9);
   transition: transform 0.5s;
@@ -526,9 +533,13 @@ ul {
   border-radius: 25px;
   padding: 5px 100px;
   text-align: center;
-  border: solid 2px #FCC8B2;
+  border: solid 2px #fcc8b2;
 }
-.contact__main .section__contact .contact__form .form__nom, .contact__main .section__contact .contact__form .form__prenom, .contact__main .section__contact .contact__form .form__courriel, .contact__main .section__contact .contact__form .form__sujet, .contact__main .section__contact .contact__form .form__message {
+.contact__main .section__contact .contact__form .form__nom,
+.contact__main .section__contact .contact__form .form__prenom,
+.contact__main .section__contact .contact__form .form__courriel,
+.contact__main .section__contact .contact__form .form__sujet,
+.contact__main .section__contact .contact__form .form__message {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -537,10 +548,14 @@ ul {
      text-align: center;
   }*/
 }
-.contact__main .section__contact .contact__form .form__nom input, .contact__main .section__contact .contact__form .form__prenom input, .contact__main .section__contact .contact__form .form__courriel input, .contact__main .section__contact .contact__form .form__sujet input {
+.contact__main .section__contact .contact__form .form__nom input,
+.contact__main .section__contact .contact__form .form__prenom input,
+.contact__main .section__contact .contact__form .form__courriel input,
+.contact__main .section__contact .contact__form .form__sujet input {
   width: 100%;
 }
-.contact__main .section__contact .contact__form .form__prenom label, .contact__main .section__contact .contact__form .form__courriel label {
+.contact__main .section__contact .contact__form .form__prenom label,
+.contact__main .section__contact .contact__form .form__courriel label {
   margin-right: 25px;
 }
 .contact__main .section__contact .contact__form .form__message {
@@ -554,16 +569,16 @@ ul {
   border-radius: 25px;
   padding: 5px 100px;
   width: 100%;
-  border: solid 2px #FCC8B2;
+  border: solid 2px #fcc8b2;
 }
 .contact__main .section__contact .contact__form .btn__envoyer {
   text-decoration: none;
   padding: 5px 25px;
   align-self: center;
-  background-color: #FCC8B2;
+  background-color: #fcc8b2;
 }
 .contact__main .section__contact .contact__form .btn__envoyer:hover {
-  background-color: #EFA48B;
+  background-color: #efa48b;
   text-decoration: underline;
 }
 
@@ -618,7 +633,8 @@ footer {
   width: 20px;
 }
 
-.telephone, a {
+.telephone,
+a {
   color: #fff;
 }
 
@@ -641,26 +657,36 @@ footer {
   color: #fff;
 }
 
-.shopify img, .nintendo img, .laSource img {
+.shopify img,
+.nintendo img,
+.laSource img {
   transition: transform 0.5s;
 }
 
-.shopify img:hover, .nintendo img:hover, .laSource img:hover {
+.shopify img:hover,
+.nintendo img:hover,
+.laSource img:hover {
   transform: scale(1.5);
   transition: transform 0.5s;
 }
 
-.logoPied img, .courriel img, .facebook img, .instagram img {
+.logoPied img,
+.courriel img,
+.facebook img,
+.instagram img {
   transition: transform 0.5s;
 }
 
-.logoPied img:hover, .courriel img:hover, .facebook img:hover, .instagram img:hover {
+.logoPied img:hover,
+.courriel img:hover,
+.facebook img:hover,
+.instagram img:hover {
   transition: transform 0.5s;
   transform: scale(1.1);
 }
 
 .section__erreur404 {
-  background-color: #EFA48B;
+  background-color: #efa48b;
   height: 700px;
   display: flex;
   flex-direction: column;
@@ -675,5 +701,42 @@ footer {
 .erreur404__titre2 {
   font-size: 20px;
 }
-/*# sourceMappingURL=main.css.map */
 
+/* single product */
+.single-product__boite {
+  z-index: 10;
+  border: 2px solid #fcc8b2;
+  margin-bottom: 30px;
+  border-radius: 20px;
+}
+.single-product__boite-image {
+  width: 300px;
+}
+.single-product__image {
+  width: 100%;
+}
+.single-product__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 6px solid white;
+  border-radius: 20px;
+}
+.single-product__nom {
+  font-size: 25px;
+  padding: 10px;
+  font-weight: bold;
+}
+.single-product__prix {
+  width: 50%;
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 27px;
+}
+.single-product__description {
+  padding: 10px;
+  border-radius: 20px;
+}
+
+/*# sourceMappingURL=main.css.map */
