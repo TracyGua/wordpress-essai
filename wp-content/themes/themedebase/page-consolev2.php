@@ -12,12 +12,12 @@ get_header(); // Affiche header.php
 ?>
 
 
-        <div class=" item ps4_1">
+        <div class="item ps4_1">
          <img class='imgItem' src="<?php the_field('imageproduit'); ?>"> 
    
              <div class="itemP">
-                <p> <?php the_title(); ?> </p>
-                <p><?php the_field('price'); ?></p>
+                <p class="item__name"> <?php the_title(); ?> </p>
+                <p class="item__prix"><?php the_field('price'); ?></p>
             </div>
   
         </div>
