@@ -13,7 +13,7 @@ get_header(); // Affiche header.php
                 <p>Ps4 Skin Decals: Ultramarine</p>
                 <p>$26</p>
             </div>
-            </a>
+        </a>
         </div>
         <div class="item ps4_2">
         <a href="#" class="lienItem"> <img class='imgItem' src="<?php echo get_template_directory_uri(). '\assets\appareils\ps4\02_ps4.webp'; ?>"></a>
