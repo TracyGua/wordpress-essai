@@ -11,10 +11,6 @@ if ( have_posts() ) :
 	// Si oui, bouclons au travers les articles (logiquement, il n'y en aura qu'un)
 	while ( have_posts() ) : the_post(); 
 ?>
-  
-
-
-	<article>
     <section class="single-product__boite container">
     <div class="row" >
     <div class="single-product__boite-image col-6"> 
@@ -37,7 +33,6 @@ if ( have_posts() ) :
         </div>
           
     </section>
-	</article>
 
 
 <?php endwhile; // Fermeture de la boucle
