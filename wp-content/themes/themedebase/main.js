@@ -1,4 +1,4 @@
-/* Wow, tellement un beau spot pour écrire du JS 
+/* Wow, tellement un beau spot pour écrire du JS */
 var swiper = new Swiper(".swiper", {
   autoplay: {
     delay: 2000,
@@ -6,7 +6,7 @@ var swiper = new Swiper(".swiper", {
   direction: "horizontal",
   loop: "true",
   effect: "slide",
-});*/
+});
 
 let productsArr = document.querySelectorAll(".item");
 let namesArr = document.querySelectorAll(".item__name");

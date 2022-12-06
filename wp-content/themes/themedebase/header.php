@@ -23,7 +23,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Ruda:wght@600&display=swap" rel="stylesheet">
-    
+
 <?php wp_head(); 
 /* Cette fonction permet à WordPress et aux extensions d'instancier des fichier CSS et js dans le <head>
 	 Supprimer cette fonction briserait vos extensions et diverses fonctionnalités WordPress. 
