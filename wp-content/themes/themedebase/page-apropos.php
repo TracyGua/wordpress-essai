@@ -1,4 +1,4 @@
-<?php /* Template Name: Consolev2 */ ?>
+<?php /* Template Name: A propos */ ?>
 
 <?php
 
@@ -11,7 +11,7 @@ get_header(); // Affiche header.php
   while ($products->have_posts()) : $products->the_post(); 
 ?>
 
-
+        <a href="<?php the_permalink(); ?>">
         <div class="item ps4_1">
          <img class='imgItem' src="<?php the_field('imageproduit'); ?>"> 
    
@@ -21,6 +21,7 @@ get_header(); // Affiche header.php
             </div>
   
         </div>
+        </a>
 
 <?php
   endwhile; 

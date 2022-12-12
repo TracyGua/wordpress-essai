@@ -1,0 +1,8 @@
+{
+  "post_types": {
+    "produit": {},
+    "nouvelle": {},
+    "membres": {},
+    "temoignage": {}
+  }
+}

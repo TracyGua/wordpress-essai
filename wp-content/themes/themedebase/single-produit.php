@@ -40,7 +40,6 @@ if ( have_posts() ) :
 	// get_template_part( 'partials/comments' ); Affiche partials/comments.php
 
 	// else : // Si aucun article n'a été trouvée
-		get_template_part( 'partials/404' ); // Affiche partials/404.php
 	endif;
 
 	get_footer(); // Affiche footer.php 
