@@ -6,9 +6,20 @@ Description: Thème de base pour apprendre à faire un site Wordpress.
 Version: 1.0
 -------------------------------------------------------------- */
 
+@charset "UTF-8";
+/*@mixin placeholder {
+    padding: 0px 100px;
+    width: 100%;
+}*/
 body {
   font-family: "Roboto", thin;
 }
+
+/*Mettre le filtre de couleur par dessus de la balise picture*/
+/*Couvrir la section avec l'image en portrait sans la déformer et ajuster sa position*/
+/*Cacher l'image landscape par défaut*/
+/*Centrer la colonne verticalement et horizontalement*/
+/*Aligner le title-1 et la présentation du groupe au milieu de la colonne*/
 * {
   box-sizing: border-box;
 }
@@ -56,11 +67,12 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  margin-top: 25px;
   text-align: center;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 60px;
   color: white;
+  font-family: "Ruda", SemiBold;
+  text-shadow: 3px 3px 3px black;
 }
 
 h2 {
@@ -115,7 +127,7 @@ main {
   text-shadow: 3px 3px 3px #000;
 }
 
-/*Carousel*/
+/**/
 .mySwiper {
   width: 100%;
   overflow: hidden;
@@ -135,7 +147,7 @@ main {
   align-items: center;
   justify-content: center;
   width: 100%;
-  background-image: url("medias/icones/rectangle_backg.png");
+  /* background-image: url("medias/icones/rectangle_backg.png");*/
   border-bottom: 1px solid #efa48b;
 }
 
@@ -145,11 +157,10 @@ main {
 
 .section__nouvelles.accueil__title {
   margin-top: 60px;
-  font-size: 30px;
+  font-size: 25px;
   font-family: "Roboto", thin;
   width: 100%;
   text-align: center;
-  font-weight: bold;
   text-decoration: underline;
 }
 
@@ -162,11 +173,13 @@ main {
   text-align: center;
   margin-bottom: 100px;
 }
+
 .accueil__temoignages {
   padding: 20px;
   border: 1px solid #fcc8b2;
   border-radius: 20px;
 }
+
 .accueil__temoignages__nom {
   font-family: "Roboto", Medium;
   font-size: 30px;
@@ -175,11 +188,10 @@ main {
 
 .section__temoignages__titre {
   margin-top: 60px;
-  font-size: 30px;
+  font-size: 25px;
   font-family: "Roboto", thin;
   width: 100%;
   text-align: center;
-  font-weight: bold;
   text-decoration: underline;
 }
 
@@ -192,6 +204,7 @@ main {
   height: 150px;
   margin-top: 20px;
   margin-left: 5px;
+  margin-bottom: 100px;
 }
 
 .hero__nouvelles {
@@ -203,14 +216,14 @@ main {
 .imgLandscape,
 .imgPortrait {
   width: 100%;
-  height: 100%;
+  height: 85vh;
 }
 
 .imgPortrait {
   -o-object-fit: cover;
   object-fit: cover;
-  -o-object-position: 0% 100%;
-  object-position: 0% 100%;
+  -o-object-position: 0% 50%;
+  object-position: 0% 50%;
 }
 
 .imgLandscape {
@@ -240,6 +253,7 @@ main .row {
 .menu a {
   color: #fff;
   text-decoration: none;
+  font-size: 21px;
 }
 
 .menu a:hover {
@@ -286,18 +300,27 @@ main .row {
 }
 /* Écran telephone*/
 @media screen and (max-width: 375px) {
-  .heros__boite-description {
-    margin: 0 5px;
-  }
-  .heros__boite-description .heros__desc {
-    display: none;
-  }
   main .row {
     display: flex;
     flex-wrap: wrap;
   }
   .swiper {
     width: 100%;
+  }
+  .swiper-slide img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: 55% 0%;
+    object-position: 55% 0%;
+  }
+}
+/* Écran tablette*/
+@media screen and (max-width: 768px) {
+  .swiper-slide img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: 55% 0%;
+    object-position: 55% 0%;
   }
 }
 .Apropos {
@@ -307,11 +330,14 @@ main .row {
   margin-top: 10%;
   margin-bottom: 5%;
   border-radius: 20px;
-  border: 2px solid #fcc8b2;
+  border: 2px solid #efa48b;
+  background-color: black;
+  color: white;
+  transition: transform 0.5s;
 }
 
 .Apropos:hover {
-  transform: scale(0.9);
+  transform: scale(1.2);
   transition: transform 0.5s;
 }
 
@@ -330,11 +356,14 @@ main .row {
   margin-top: 5%;
   margin-bottom: 5%;
   border-radius: 20px;
-  border: 2px solid #fcc8b2;
+  border: 2px solid #efa48b;
+  background-color: white;
+  color: black;
+  transition: transform 0.5s;
 }
 
 .Histoire:hover {
-  transform: scale(0.9);
+  transform: scale(1.2);
   transition: transform 0.5s;
 }
 
@@ -371,22 +400,86 @@ main .row {
   flex-wrap: wrap;
   margin: 0 auto;
 }
-
+/*Membres*/
 .section__membres {
-  margin-top: 150px;
+  margin-bottom: 50px;
+}
+.section__membres .membres__cartes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px);
+  grid-template-rows: repeat(auto-fit);
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__membres .membre__card {
+  position: relative;
+  margin-top: 50px;
+  width: 250px;
+  height: 350px;
+  display: inline-block;
+  padding: 20px;
+  border: none;
+}
+
+.section__membres .membre__img {
+  width: 100%;
+  -o-object-fit: contain;
+  object-fit: contain;
+  margin-left: auto;
+  border-radius: 20px;
+  border: 2px solid #fcc8b2;
+  overflow: hidden;
+  border: 2px solid #fcc8b2;
+  transition: transform 0.5s;
+}
+.membre__titre {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 25px;
+  text-decoration: underline;
+}
+
+.section__membres .membre__img:hover {
+  transition: 0.5s;
+  transform: scale(1.2);
+}
+
+.section__membres .membre__text {
+  margin-top: 7px;
+  text-align: center;
+  background-color: #fcc8b2;
+  border-radius: 10px;
+}
+.section__membres .membre__role {
+  padding: 10px 0px;
+  text-decoration: underline;
+}
+.section__membres .membre__nom {
+  padding: 10px 0px;
+}
+
+/*
+.section__membres {
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .section__membres .membres__cartes {
-  display: flex;
-  justify-content: space-evenly;
-  width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 400px);
+  grid-template-rows: repeat(auto-fit);
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
 }
-.section__membres .membre__titre {
+.membre__titre {
   text-align: center;
   font-size: 25px;
   margin-bottom: 25px;
+  text-decoration: underline;
 }
 .section__membres .membre__card {
   width: 100%;
@@ -402,38 +495,42 @@ main .row {
   align-self: center;
   border-radius: 20px;
   border: 2px solid #fcc8b2;
+  object-fit: cover;
+  transition: 0.5s;
 }
 .section__membres .membre__img:hover {
   transition: 0.5s;
-  transform: scale(0.9);
+  transform: scale(1.2);
 }
 .section__membres .membre__text {
   margin: 0 auto;
   width: 100%;
-  height: 100%;
+  height: 50%;
   max-width: 400px;
   margin-top: 10px;
   text-align: center;
   border-radius: 5px 5px 5px 5px;
   background-color: #fcc8b2;
-  transition: transform 0.5s;
-}
-.section__membres .membre__text:hover {
-  transition: 0.5s;
-  transform: scale(0.9);
 }
 .section__membres .membre__role {
   padding: 10px 0px;
+  text-decoration: underline;
 }
 .section__membres .membre__nom {
   padding: 10px 0px;
 }
 
+@media (min-width: 375px) {
+  .section__membres .membres__cartes {
+    align-items: center;
+    flex-direction: column;
+  }
+}
 /*
 @media (min-width: 768px) {
-   .membre__text {
-      height: 500px;
-   }
+  .section__membres .membres__cartes {
+    flex-direction: row;
+  }
 }*/
 .imgPortraitContain {
   -o-object-fit: contain;
@@ -798,7 +895,7 @@ ul {
   text-align: center;
   text-decoration: underline;
   font-size: 25px;
-  margin-bottom: 90px;
+  margin-bottom: 50px;
   font-family: "Roboto", Medium;
 }
 .contact__main .section__contact .contact__form {
@@ -818,6 +915,7 @@ ul {
   padding: 5px 100px;
   text-align: center;
   border: solid 2px #fcc8b2;
+  margin-bottom: 10px;
 }
 .contact__main .section__contact .contact__form .form__nom,
 .contact__main .section__contact .contact__form .form__prenom,
@@ -856,6 +954,7 @@ ul {
   border: solid 2px #fcc8b2;
 }
 .contact__main .section__contact .contact__form .btn__envoyer {
+  margin-top: 20px;
   text-decoration: none;
   padding: 5px 25px;
   align-self: center;
@@ -931,6 +1030,7 @@ ul {
   text-align: center;
   border-radius: 20px;
   font-size: 18px;
+  text-shadow: 3px 3px 3px black;
   color: #fff;
   background-color: rgba(239, 164, 139, 0.5);
 }
@@ -958,6 +1058,7 @@ ul {
   display: flex;
   text-decoration: none;
   padding: 5px 25px;
+  align-self: center;
   border-radius: 20px;
   font-size: 20px;
   border: none;
@@ -973,7 +1074,10 @@ ul {
   transform: scale(1.1);
   transition: transform 0.5s;
 }
-/*footer*/
+
+/*.contact__form:placeholder {
+   @include contact.placeholder;
+}*/
 footer {
   display: flex;
   align-items: center;
@@ -1111,6 +1215,8 @@ a {
 }
 
 .maps__titre-carte {
+  margin-top: 50px;
+  text-decoration: underline;
   text-align: center;
 }
 
@@ -1123,12 +1229,13 @@ a {
 }
 
 .maps__titre1-carte {
+  text-decoration: underline;
   text-align: center;
 }
 
 /* single product */
 .single-product__boite {
-  z-index: 10;
+  z-index: 1;
   border: 2px solid #fcc8b2;
   margin-bottom: 30px;
   border-radius: 20px;
@@ -1161,5 +1268,76 @@ a {
 .single-product__description {
   padding: 10px;
   border-radius: 20px;
+}
+
+/*Single news*/
+.single-news__boite .row {
+  display: flex;
+  flex-direction: column;
+}
+.single-news__boite {
+  z-index: 1;
+  border: 2px solid #fcc8b2;
+  margin-bottom: 30px;
+  border-radius: 20px;
+}
+.single-news__boite-image {
+  width: 100%;
+}
+.single-news__image {
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 20px;
+}
+.single-news__text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 6px solid white;
+  border-radius: 20px;
+  font-size: 22px;
+}
+.single-news__date {
+  font-size: 25px;
+  padding: 10px;
+  font-weight: medium;
+}
+.single-news__titre {
+  padding: 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 27px;
+}
+.single-news__description {
+  padding: 10px;
+  border-radius: 20px;
+}
+/*Modals*/
+.modals__img {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.modals__role {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.modals__Lorem {
+  text-align: center;
+}
+
+#modal__titre {
+  text-align: center;
+  font-size: 30px;
+}
+
+#modal__content {
+  background-color: #fae3d9;
 }
 /*# sourceMappingURL=main.css.map */

@@ -21,8 +21,11 @@ get_header(); // Affiche header.php
         <div class="swiper-wrapper">
                 <div class="swiper-slide"><img class="img-fluid" src="<?php echo get_template_directory_uri(). '/assets/appareils/macbook/01_mac.webp'; ?>" alt=""></div>
                 <div class="swiper-slide"><img class="img-fluid" src="<?php echo get_template_directory_uri(). '/assets/appareils/macbook/02_mac.webp'; ?>" alt=""></div>
-                <div class="swiper-slide"><img class="img-fluid" src="<?php echo get_template_directory_uri(). '/assets/appareils/macbook/01_mac.webp'; ?>" alt=""></div>
-        </div>
+                <div class="swiper-slide"><img class="img-fluid" src="<?php echo get_template_directory_uri(). '/assets/appareils/macbook/03_mac.webp'; ?>" alt=""></div>
+                <div class="swiper-slide"><img class="img-fluid" src="<?php echo get_template_directory_uri(). '/assets/appareils/macbook/04_mac.webp'; ?>" alt=""></div>
+                <div class="swiper-slide"><img class="img-fluid" src="<?php echo get_template_directory_uri(). '/assets/appareils/macbook/05_mac.webp'; ?>" alt=""></div>
+                <div class="swiper-slide"><img class="img-fluid" src="<?php echo get_template_directory_uri(). '/assets/appareils/macbook/06_mac.webp'; ?>" alt=""></div>
+              </div>
       </div>
       <div class="container">
         <div class="row justify-content-center">
@@ -35,7 +38,7 @@ get_header(); // Affiche header.php
 </section>
 
 
-<div class="section__nouvelles accueil__title">Premières Nouvelles</div>
+<h2 class="section__nouvelles accueil__title">Premières Nouvelles</h2>
 
 <section class="section__nouvelles accueil">
 
@@ -70,10 +73,10 @@ get_header(); // Affiche header.php
 
 
 <section class="section__temoignages container">
-<div class="section__temoignages__titre">Témoignages</div>
+<h2 class="section__temoignages__titre">Témoignages</h2>
 
 <div class="mySwiper__temoignages container">
-<div class="swiper-wrapper ">
+<div class="swiper-wrapper">
 <?php
   $tem = new WP_Query('post_type=temoignage');
   while ($tem->have_posts()) : $tem->the_post(); 
@@ -96,7 +99,6 @@ get_header(); // Affiche header.php
   wp_reset_postdata(); 
 ?>
 
-</div>
 </div>
 </div>
 </section> 

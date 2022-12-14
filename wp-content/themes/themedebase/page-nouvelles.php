@@ -4,10 +4,13 @@
 
 get_header(); // Affiche header.php
 ?>
+
+<main>
+    <div class="contraste-div"></div>
 <section class="hero__nouvelles">
         <picture>     
-            <source class="imgLandscape" srcset="<?php echo get_template_directory_uri(). '/assets/nouvelles/heros_nouvelles.webp';?>" media="(orientation: landscape)" />
-            <img class="imgPortrait imgCentrer" src="<?php echo get_template_directory_uri(). '/assets/nouvelles/heros_nouvelles.webp';?>" />
+            <source class="imgLandscape" srcset="<?php echo get_template_directory_uri(). '/assets/images_heros/nouvelle_landscape.webp';?>" media="(orientation: landscape)" />
+            <img class="imgPortrait imgCentrer" src="<?php echo get_template_directory_uri(). '/assets/images_heros/nouvelle_portrait.jpg';?>" />
         </picture>
       
         <div class="container-fluid mx-auto">
@@ -18,6 +21,7 @@ get_header(); // Affiche header.php
             </div>
         </div>
     </section>
+    
 
 <section class="section__nouvelles">
 <?php
@@ -32,7 +36,7 @@ get_header(); // Affiche header.php
          <a href="<?php the_permalink(); ?>"  class="lienItemP__nouvelle">
              <div class="itemP__nouvelle">
                 <p class="titre__nouvelle"> <?php the_title(); ?> </p>
-                <p class="date__nouvelle"><?php the_field('date_nouvelle');?></p>
+                <p class="date__nouvelle"><?php the_field('date_nouvelle'); ?></p>
             </div>
             </a>
         </div>
@@ -43,7 +47,7 @@ get_header(); // Affiche header.php
 ?>
 
 </section>
-
+</main>
 
 <input type="button" value="Voir plus de nouvelles" class="btnNouvelles"></input>
 

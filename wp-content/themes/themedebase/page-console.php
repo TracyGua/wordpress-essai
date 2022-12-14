@@ -4,11 +4,12 @@
 
 get_header(); // Affiche header.php
 ?>
-
+   <main> 
+   <div class="contraste-div"></div>
 <section class="hero__nouvelles">
         <picture>   
-            <source class="imgLandscape" srcset="<?php echo get_template_directory_uri(). '/assets/appareils/switch_lite/Capture.png'; ?>" />
-            <img class="imgPortraitContain" src="<?php echo get_template_directory_uri(). '/assets/appareils/switch_lite/Capture.png'; ?>" />
+            <source class="imgLandscape" srcset="<?php echo get_template_directory_uri(). '/assets/images_heros/console_landscape.png'; ?>" media="(orientation: landscape)"/>
+            <img class="imgPortraitContain" src="<?php echo get_template_directory_uri(). '/assets/images_heros/console_portrait.png'; ?>" />
         </picture>
         <div class="container-fluid mx-auto">
             <div class="row align-items-center justify-content-center sectionImageGroupe">
@@ -43,6 +44,8 @@ get_header(); // Affiche header.php
 ?>
 
 </div>
-   
+
+
+</main> 
     <?php get_footer(); // Affiche footer.php 
 ?>
