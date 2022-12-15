@@ -31,14 +31,39 @@ get_header(); // Affiche header.php
         <div class="row justify-content-center">
           <div class="slogan">
             <h1 class="text-sm-center text-md-center text-lg-center">Zoomhit Skins</h1>
-            <p class="text-sm-center text-md-center text-lg-center description">ZoomHitskin propose une variété de décals,d'emballages et d'habillages de haute qualité pour consoles de jeux et appareils électroniques</p>
+            <?php
+  $arguments = array( // 👈 Tableau d'arguments
+    'post_type' => 'element_accueil',
+    'posts_per_page' => 1
+  );
+  $desc = new WP_Query($arguments); // 👈 Utilisation
+  while ($desc->have_posts()) : $desc->the_post(); 
+?>
+<p class="text-sm-center text-md-center text-lg-center description"><?php the_field('description_heros');?></p>
+<?php
+  endwhile; 
+  wp_reset_postdata(); 
+?>
+            
           </div>
         </div>
       </div>
 </section>
+<?php
+  $arguments2 = array( // 👈 Tableau d'arguments
+    'post_type' => 'titre_secondaire',
+    'posts_per_page' => 1
+  );
+  $title = new WP_Query($arguments2); // 👈 Utilisation
+  while ($title->have_posts()) : $title->the_post(); 
+?>
+<h2 class="section__nouvelles accueil__title"><?php the_title();?></h2>
+<?php
+  endwhile; 
+  wp_reset_postdata(); 
+?>
 
 
-<h2 class="section__nouvelles accueil__title">Premières Nouvelles</h2>
 
 <section class="section__nouvelles accueil">
 
@@ -73,7 +98,21 @@ get_header(); // Affiche header.php
 
 
 <section class="section__temoignages container">
-<h2 class="section__temoignages__titre">Témoignages</h2>
+
+<?php
+  $arguments = array( // 👈 Tableau d'arguments
+    'post_type' => 'titre_secondaire2',
+    'posts_per_page' => 1
+  );
+  $title = new WP_Query($arguments); // 👈 Utilisation
+  while ($title->have_posts()) : $title->the_post(); 
+?>
+<h2 class="section__temoignages__titre"><?php the_title(); ?></h2>
+
+<?php
+  endwhile; 
+  wp_reset_postdata(); 
+?>
 
 <div class="mySwiper__temoignages container">
 <div class="swiper-wrapper">
