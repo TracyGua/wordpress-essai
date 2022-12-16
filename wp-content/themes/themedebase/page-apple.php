@@ -14,7 +14,7 @@ get_header(); // Affiche header.php
         <div class="container-fluid mx-auto">
             <div class="row align-items-center justify-content-center sectionImageGroupe">
                 <div class="colonne align-self-center col-12 col-md-6 col-xxl-4 text-center">
-                    <h1 class="title-1">Apple</h1>
+                    <h1 class="title-1"><?php single_post_title() ?></h1>
                 </div>
             </div>
         </div>

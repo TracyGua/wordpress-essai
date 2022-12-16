@@ -15,29 +15,41 @@ get_header(); // Affiche header.php
         <div class="container-fluid mx-auto">
             <div class="row align-items-center justify-content-center sectionImageGroupe">
                 <div class="colonne align-self-center col-12 col-md-6 col-xxl-4 text-center">
-                    <h1 class="title-1">À Propos</h1>
+                    <h1 class="title-1"><?php single_post_title() ?></h1>
                 </div>
             </div>
         </div>
     </section>
 
 
+    <?php
+  $apropos = new WP_Query('post_type=apropos_element');
+  while ($apropos->have_posts()) : $apropos->the_post(); 
+?>
+            
+            
       <div class='Apropos'>
-        <h2 class='titrea'>Aperçu</h2>
+        <h2 class='titrea'> <?php the_field('apercu_titre'); ?> </h2>
         <div class='texteA'>
-        <p>Ce site Web est exploité par ZoomHitskin. Sur ce site, les termes "nous", "notre" et "nos" font référence à ZoomHitskin. ZoomHitskin propose ce site Web, y compris toutes les informations, outils et services disponibles sur ce site pour vous, l'utilisateur, sous réserve de votre acceptation de tous les termes, conditions, politiques et avis énoncés ici. En visitant notre site et/ou en achetant quelque chose chez nous, vous vous engagez dans notre "Service" et acceptez d'être lié par les termes et conditions suivants ("Conditions d'utilisation", "Conditions"), y compris ces termes et conditions et politiques supplémentaires référencé ici et/ou disponible par hyperlien. Ces conditions d'utilisation s'appliquent à tous les utilisateurs du site, y compris, sans s'y limiter, les utilisateurs qui sont des navigateurs, des fournisseurs, des clients, des marchands et/ou des contributeurs de contenu.</p>
+        <p><?php the_field('apercu_text'); ?></p>
         </div>
       </div>
       <div class='Histoire'>
-        <h2 class='titreh'>Histoire</h2>
+        <h2 class='titreh'><?php the_field('histoire_titre'); ?></h2>
         <div class='texteH'>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p><?php the_field('histoire_text'); ?></p>
         </div>
       </div>
-
       </main>
       
-      <h2 class="membre__titre text-center">Membres</h2>
+      <h2 class="membre__titre text-center"><?php the_field('titre_membres'); ?></h2>
+<?php
+  endwhile; 
+  wp_reset_postdata(); 
+?>
+
+
+
     <section class="container mx-auto section__membres">
    
     <div class="row membres__cartes">

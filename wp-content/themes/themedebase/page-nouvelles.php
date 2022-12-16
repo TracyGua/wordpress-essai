@@ -9,14 +9,14 @@ get_header(); // Affiche header.php
   <!--  <div class="contraste-div"></div>-->
 <section class="hero__nouvelles">
         <picture>     
-            <source class="imgLandscape" srcset="<?php echo get_template_directory_uri(). '/assets/images_heros/nouvelle_landscape.webp';?>" media="(orientation: landscape)" />
+            <source class="imgLandscape" srcset="<?php echo get_template_directory_uri(). '/assets/images_heros/nouvelle_landscape.png';?>" media="(orientation: landscape)" />
             <img class="imgPortrait imgCentrer" src="<?php echo get_template_directory_uri(). '/assets/images_heros/nouvelle_portrait.jpg';?>" />
         </picture>
       
         <div class="container-fluid mx-auto">
             <div class="row align-items-center justify-content-center sectionImageGroupe">
                 <div class="colonne align-self-center col-12 col-md-6 col-xxl-4 text-center">
-                    <h1 class="title-1">Nouvelles</h1>
+                    <h1 class="title-1"><?php single_post_title() ?></h1>
                 </div>
             </div>
         </div>
@@ -56,7 +56,7 @@ get_header(); // Affiche header.php
 </section>
 </main>
 
-<input type="button" value="Voir plus de nouvelles" class="btnNouvelles"></input>
+<input type="button" value="Voir plus" class="btnNouvelles"></input>
 
 
 
