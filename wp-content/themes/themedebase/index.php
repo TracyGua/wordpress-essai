@@ -8,9 +8,8 @@ get_header(); // Affiche header.php
 
 // Est-ce que nous avons des posts qui correspondent à notre requête ?
 // Dans le cas de la page d'accueil, les billets les plus récents serons affichés
-/*if ( have_posts() ) : 
+if ( have_posts() ) : 
 	// Si oui, bouclons au travers pour tous les afficher
-	while ( have_posts() ) : the_post(); */
 ?>
 
 <body>
@@ -41,8 +40,10 @@ get_header(); // Affiche header.php
 ?>
 <p class="text-sm-center text-md-center text-lg-center description"><?php the_field('description_heros');?></p>
 <?php
-  endwhile; 
+endwhile; 
   wp_reset_postdata(); 
+
+
 ?>
             
           </div>
@@ -136,6 +137,7 @@ get_header(); // Affiche header.php
 <?php
   endwhile; 
   wp_reset_postdata(); 
+
 ?>
 
 </div>
@@ -147,11 +149,10 @@ get_header(); // Affiche header.php
 </body>
 
 
-<?php /*endwhile; wp_reset_postdata(); // Fermeture de la boucle
-
+<?php 
 else : // Si aucune page n'a été trouvée
 	get_template_part( 'partials/404' ); // Affiche partials/404.php
-endif; */
+endif;
 
 get_footer(); // Affiche footer.php 
 ?>

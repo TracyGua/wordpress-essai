@@ -93,9 +93,14 @@ gsap.timeline()
     .from('.heros__boite-description',{opacity:0, duration:1, scale:0, ease:'bounce'})  
 
     gsap.timeline()
-.from('.erreur404__titre',{opacity:0, duration:1, scale:0, ease:'back'})  
-.from('.erreur404__titre2',{opacity:0, duration:1, scale:0, ease:'bounce'})  
-
+.from('.erreur404__titre',{opacity:0, duration:0.5, scale:0, ease:'back'})  
+.from('.erreur404__titre2',{opacity:0, duration:0.5, scale:0, ease:'bounce'})  
+.to('.erreur404__titre', { 
+    rotation: '360',
+    duration: 2,
+    repeat: -1,
+    ease: 'none',
+  }) 
 //Map
  gsap.timeline()
  .from('.maps__carte',{rotation:30, duration:1, scale:0, ease:'bounce'})   
