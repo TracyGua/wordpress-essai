@@ -15,7 +15,7 @@
             </div>
             <div class="logoPartenaire col-12 col-md-4 text-center">
                 <div class="shopify text-lg-start">
-                    <a href="https://www.facebook.com/ZoomHitSkins">
+                    <a href="https://www.shopify.com/free-trial?utm_campaign=poweredby&utm_medium=shopify&utm_source=onlinestore">
                     <img src="<?php echo get_template_directory_uri(). '/assets/icones/shopify.png'; ?>"></img></a>
                 </div>
             
@@ -35,7 +35,7 @@
                     <a href="mailto:info@zoomhit.ca"><img src="<?php echo get_template_directory_uri().'/assets/icones/reseaux_sociaux/courriel.png'; ?>"><img></a>
                 </div>
                 <div class="facebook text-center">
-                    <a href="https://www.shopify.com/free-trial?utm_campaign=poweredby&utm_medium=shopify&utm_source=onlinestore" ><img
+                    <a href="https://www.facebook.com/ZoomHitSkins" ><img
                         src="<?php echo get_template_directory_uri().'\assets\icones\reseaux_sociaux\facebook.png'; ?>"></img></a>
                 </div>
                 <div class="instagram text-center">
