@@ -5,10 +5,10 @@
 get_header(); // Affiche header.php
 ?>
    <main> 
-   <div class="contraste-div"></div>
+  <!-- <div class="contraste-div"></div>-->
 <section class="hero__nouvelles">
         <picture>   
-            <source class="imgLandscape" srcset="<?php echo get_template_directory_uri(). '/assets/images_heros/apple_landscape.jpg'; ?>" media="(orientation: landscape)"/>
+            <source class="imgLandscape" srcset="<?php echo get_template_directory_uri(). '/assets/images_heros/apple_landscape.png'; ?>" media="(orientation: landscape)"/>
             <img class="imgPortraitContain" src="<?php echo get_template_directory_uri(). '/assets/images_heros/apple_portrait.jpg'; ?>" />
         </picture>
         <div class="container-fluid mx-auto">

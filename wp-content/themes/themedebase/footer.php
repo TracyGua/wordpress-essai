@@ -101,6 +101,23 @@ gsap.timeline()
  .from('.maps__carte',{opacity:0, duration:1, scale:0, ease:'bounce'})   
 
 
+ //
+ const btnNouvelles = document.querySelector(".btnNouvelles");
+let nouvellesHiddenArr = document.querySelectorAll(".item__nouvelle.hidden");
+
+//Help, click bouton pour retirer la classe hidden et afficher les nouvelles avec la classe hidden par défaut.
+btnNouvelles.addEventListener('click', function () {
+  console.log('hellooooo')
+  //Boucler sur les éléments pour afficher toutes les nouvelles cachés quand quelqu'un clique sur le bouton
+  //Boucler sur les items Nouvelles avec la classe hidden en premier
+  nouvellesHiddenArr.forEach(function (itemNouvelle) {
+    itemNouvelle.classList.remove("hidden");
+  });
+
+  //Cacher le bouton voir plus de nouvelles et montrer le bouton retour
+  btnNouvelles.classList.add("hidden");
+});
+
 </script>
 </body>
 

@@ -5,7 +5,7 @@
 get_header(); // Affiche header.php
 ?>
    <main> 
-   <div class="contraste-div"></div>
+  <!-- <div class="contraste-div"></div>-->
 <section class="hero__nouvelles">
         <picture>   
             <source class="imgLandscape" srcset="<?php echo get_template_directory_uri(). '/assets/images_heros/console_landscape.png'; ?>" media="(orientation: landscape)"/>
@@ -21,6 +21,7 @@ get_header(); // Affiche header.php
     </section>
 
 <div class="produits">
+
 <?php
   $products = new WP_Query('post_type=console_produit');
   while ($products->have_posts()) : $products->the_post(); 

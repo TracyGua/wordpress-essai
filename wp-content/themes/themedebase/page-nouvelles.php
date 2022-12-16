@@ -6,7 +6,7 @@ get_header(); // Affiche header.php
 ?>
 
 <main>
-    <div class="contraste-div"></div>
+  <!--  <div class="contraste-div"></div>-->
 <section class="hero__nouvelles">
         <picture>     
             <source class="imgLandscape" srcset="<?php echo get_template_directory_uri(). '/assets/images_heros/nouvelle_landscape.webp';?>" media="(orientation: landscape)" />
@@ -25,12 +25,18 @@ get_header(); // Affiche header.php
 
 <section class="section__nouvelles">
 
+
 <?php
-  $news = new WP_Query('post_type=nouvelle');
+  $arguments = array( // 👈 Tableau d'arguments
+    'post_type' => 'nouvelle',
+    'posts_per_page' => 13
+  );
+  $news = new WP_Query($arguments); // 👈 Utilisation
   while ($news->have_posts()) : $news->the_post(); 
 ?>
 
-        <div class="item__nouvelle">
+
+<div class="item__nouvelle <?php the_field('id'); ?>">
         <a href="<?php the_permalink(); ?>" class="lienItem__nouvelle">
          <img class='imgItem__nouvelle' src="<?php the_field('nouvelle_img'); ?>"> 
          </a>
