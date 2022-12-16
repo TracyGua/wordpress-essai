@@ -1,7 +1,7 @@
 <?php
 /**
  *  Template Name: Produit
- *  Template Post Type: post, page, produit
+ *  Template Post Type: post, page, produit, console_produit, apple_produit
  */
 
 get_header(); // Affiche header.php
@@ -14,7 +14,7 @@ if ( have_posts() ) :
     <section class="single-product__boite container">
     <div class="row" >
     <div class="single-product__boite-image col-6"> 
-         <img class="single-product__image" src="<?php the_field('imageproduit'); ?>" class="logo">
+         <img class="single-product__image" src="<?php the_field('image'); ?>" class="logo">
     </div>
             <div class="single-product__text col-6"> 
                 <div class="single-product__nom"> 

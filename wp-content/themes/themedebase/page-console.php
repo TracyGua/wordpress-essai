@@ -22,13 +22,13 @@ get_header(); // Affiche header.php
 
 <div class="produits">
 <?php
-  $products = new WP_Query('post_type=produit');
+  $products = new WP_Query('post_type=console_produit');
   while ($products->have_posts()) : $products->the_post(); 
 ?>
 
         <a href="<?php the_permalink(); ?>">
         <div class="item ps4_1">
-         <img class='imgItem' src="<?php the_field('imageproduit'); ?>"> 
+         <img class='imgItem' src="<?php the_field('image'); ?>"> 
    
              <div class="itemP">
                 <p class="item__name"> <?php the_title(); ?> </p>

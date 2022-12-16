@@ -4,92 +4,48 @@
 
 get_header(); // Affiche header.php
 ?>
+   <main> 
+   <div class="contraste-div"></div>
+<section class="hero__nouvelles">
+        <picture>   
+            <source class="imgLandscape" srcset="<?php echo get_template_directory_uri(). '/assets/images_heros/apple_landscape.jpg'; ?>" media="(orientation: landscape)"/>
+            <img class="imgPortraitContain" src="<?php echo get_template_directory_uri(). '/assets/images_heros/apple_portrait.jpg'; ?>" />
+        </picture>
+        <div class="container-fluid mx-auto">
+            <div class="row align-items-center justify-content-center sectionImageGroupe">
+                <div class="colonne align-self-center col-12 col-md-6 col-xxl-4 text-center">
+                    <h1 class="title-1">Apple</h1>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class='enteteIcon dropright show'>
+<div class="produits">
+<?php
+  $products = new WP_Query('post_type=apple_produit');
+  while ($products->have_posts()) : $products->the_post(); 
+?>
 
-        <a class="deroulant entete__sous-menu btn btn-secondary dropdown-toggle" href="#" role="button"
-            id="dropdownMenuLink" data-bs-toggle="dropdown" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-            Appareils disponible
+        <a href="<?php the_permalink(); ?>">
+        <div class="item ps4_1">
+         <img class='imgItem' src="<?php the_field('image'); ?>"> 
+   
+             <div class="itemP">
+                <p class="item__name"> <?php the_title(); ?> </p>
+                <p class="item__prix"><?php the_field('price'); ?></p>
+            </div>
+  
+        </div>
         </a>
-        <div class=' imageConsole dropdown-menu sm ' x-placement="right-start" aria-labelledby="dropdownMenuLink">
-            <div class="icon Ipad dropright-item" href="#"><img src="<?php echo get_template_directory_uri(). '\assets\icones\ipad.jfif'; ?>">
-                <p>Ipad</p>
-            </div>
-            <div class="icon phone dropright-item" href="#"><img src="<?php echo get_template_directory_uri(). '\assets\icones\smartphone.png'; ?>">
-                <p>Iphone</p>
-            </div>
-            <div class="icon Macbook lite dropright-item" href="#"><img src="<?php echo get_template_directory_uri(). '\assets\icones\macbook.png'; ?>">
-                <p>Macbook</p>
-            </div>
-        </div>
-    </div>
 
-    <div class="produits">
-        <div class=" item ipad_1">
-        <a href="#" class="lienItem"><img class='imgItem' src="<?php echo get_template_directory_uri(). '\assets\appareils\ipad\01_ipad.webp'; ?>"></a>
-        <a href="#" class="lienItemP">   
-        <div class="itemP">
-                <p>Ipad Skin:Astral - Wrap Vinyl Sticker</p>
-                <p>$24</p>
-            </div>
-            </a>
-        </div>
-        <div class="item ipad_2">
-        <a href="#" class="lienItem"><img class='imgItem' src="<?php echo get_template_directory_uri(). '\assets\appareils\ipad\02_ipad.webp'; ?>"></a>
-        <a href="#" class="lienItemP">     
-        <div class="itemP">
-                <p>Ipad Skin: Dreama - Wrap Vinyl Sticker</p>
-                <p>$24</p>
-            </div>
-            </a>
-        </div>
-        <div class="item iphone_1">
-        <a href="#" class="lienItem"><img class='imgItem' src="<?php echo get_template_directory_uri(). '\assets\appareils\iphone\01_iphone.webp'; ?>"></a>
-        <a href="#" class="lienItemP">      
-        <div class="itemP">
-                <p>Iphone Case TPU: Boho</p>
-                <p>$18.95</p>
-            </div>
-            </a>
-        </div>
-        <div class="item iphone_2">
-        <a href="#" class="lienItem"><img class='imgItem' src="<?php echo get_template_directory_uri(). '\assets\appareils\iphone\02_iphone.webp'; ?>"></a>
-        <a href="#" class="lienItemP">       
-        <div class="itemP">
-                <p>Iphone Case TPU: Happy Spring</p>
-                <p>$18.95</p>
-            </div>
-            </a>
-        </div>
-        <div class="item iphone_3">
-        <a href="#" class="lienItem"><img class='imgItem' src="<?php echo get_template_directory_uri(). '\assets\appareils\iphone\03_iphone.webp'; ?>"></a>
-        <a href="#" class="lienItemP">     
-        <div class="itemP">
-                <p>Iphone Case TPU: Cat</p>
-                <p>$18.95</p>
-            </div>
-            </a>
-        </div>
-        <div class="item macbook_1">
-        <a href="#" class="lienItem"><img class='imgItem' src="<?php echo get_template_directory_uri(). '\assets\appareils\macbook\01_mac.webp'; ?>"></a>
-        <a href="#" class="lienItemP">        
-        <div class="itemP">
-                <p>Macbook Skin Decals: Flora Fashion</p>
-                <p>$28</p>
-            </div>
-            </a>
-        </div>
-        <div class="item macbook_2">
-        <a href="#" class="lienItem"><img class='imgItem' src="<?php echo get_template_directory_uri(). '\assets\appareils\macbook\02_mac.webp'; ?>"></a>
-        <a href="#" class="lienItemP">    
-        <div class="itemP">
-                <p>Macbook Skin Decals: Flora Fashion</p>
-                <p>$28</p>
-            </div>
-            </a>
-        </div>
+<?php
+  endwhile; 
+  wp_reset_postdata(); 
+?>
 
-    </div>
+</div>
+
+
+</main> 
     <?php get_footer(); // Affiche footer.php 
 ?>
