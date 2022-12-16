@@ -98,7 +98,7 @@ gsap.timeline()
 
 //Map
  gsap.timeline()
- .from('.maps__carte',{opacity:0, duration:1, scale:0, ease:'bounce'})   
+ .from('.maps__carte',{rotation:30, duration:1, scale:0, ease:'bounce'})   
 
 
  //

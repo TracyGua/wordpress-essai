@@ -1219,6 +1219,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .maps__titre-carte {
